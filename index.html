@@ -2,28 +2,27 @@
 layout: default
 ---
 
-<div class="jumbotron jumbotron-fluid vertical-center">
-  <div class="container">
-    <h1 class="display-4 text-right">Welcome Home</h1>
-    <p class="lead text-right">The Homestead Story</p>
+<div class="jumbotron">
+  <div class="container-fluid mt-5 pt-1">
+    <h1>Welcome <span class="font-bolder">Home</span></h1>
+    <p class="lead">The Homestead Story</p>
   </div>
-</div>
-<div class="container">
-  <div class="mt-5 pt-5 row">
-  {% for post in site.posts %}
-    <div class="col-6">
+
+  <div class="container-fluid card-container">
+    <div class="mt-5 pt-5 card-columns">
+    {% for post in site.posts %}
       <div class="card">
         {% if post.image-url %}
-        <img class="card-img-top" src="{{ post.image-url }}" alt="Card image cap">
+        <img class="card-img-top card-img-home" src="{{ post.image-url }}" alt="Card image cap">
         {% endif %}
         <div class="card-body">
-          <h4 class="card-title">{{ post.title }}</h5>
-          <p class="card-text">{{ post.excerpt }}</p>
+          <h4 class="card-title">{{ post.title }}</h4>
+          <p>{{ post.excerpt }}</p>
           <a href="{{ post.url }}" class="btn btn-primary stretched-link">See More</a>
         </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
   </div>
 
+</div>
 </div>

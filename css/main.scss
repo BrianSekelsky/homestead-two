@@ -4,27 +4,70 @@
 @import 'bootstrap/bootstrap';
 
 body {
-    font-family: 'Vollkorn', serif;
+    font-family: 'Merriweather', serif;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 4rem;
-    color: black;
+    font-size: 5rem;
+    font-weight: 400;
+    color: white;
+}
+
+.font-bolder {
+    font-weight: 900;
+    color: #FF7A3B;
+}
+
+.font-bolder-no-color {
+    font-weight: 900;
+    color: white;
+}
+
+.lead {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: white;
+    padding-left: 10px;
+}
+
+.card-columns {
+    column-count: 2;
+}
+
+.card-columns .card {
+    margin-bottom: 2rem;
 }
 
 .jumbotron {
     color: black;
-    background-image: url("/images/koushik-chowdavarapu-bHsWi3ttOq4-unsplash.jpg");
+    background-image: url("/images/il_794xN.1098056634_26yg.jpg");
+    // background:linear-gradient(0deg,rgba(255,122,59,0.6),rgba(255,171,46,0.3)),url('/images/il_794xN.1098056634_26yg.jpg');
+    filter: blur(5%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 40vh;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.jumbotron-post {
+    color: black;
+    // background-image: url("/images/il_794xN.1098056634_26yg.jpg");
+    background:rgba(255,122,59,0.9);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 .vertical-center {  
     display: flex;
     align-items: center;
+}
+
+.card-img-top {
+    max-height: none;
 }
 
 .overlap {
@@ -39,9 +82,31 @@ h1 {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.card-img-top {
+.card-img-home {
     object-fit: cover;
     max-height: 300px;
+}
+
+.card-img-post {
+    object-fit: cover;
+    max-height: none;
+}
+
+.card-container {
+    margin-top: 200px;
+}
+
+.tall-card {
+    height: 55vh;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.post {
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    width: 100vw;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
   
 // .card:hover {

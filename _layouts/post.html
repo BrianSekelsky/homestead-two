@@ -3,19 +3,25 @@
   {% include head.html %}
   <body>
     
-    <div class="container">
-        <img src="{{ page.image-url }}" class="img-fluid pt-5 mt-5" alt="Responsive image">
-        <h1 class="display-4 mt-3">{{ page.title }}</h1>
-
-        <div class="mt-4">
-            {{ page.excerpt }}
-
-            <a href="/">Return Home</a>
-        </div>
-
+      <div class="jumbotron jumbotron-post jumbotron-fluid">
+        <div class="post">
+          <div class="container-fluid mt-5 pt-1">
+            <h1 class="font-bolder-no-color">{{ page.title }}</h1>
+          </div>
         
-
-    </div>
+          <div class="container-fluid card-container">
+            <div class="card tall-card">
+              {% if page.image-url %}
+              <img class="card-img-top card-img-post" src="{{ page.image-url }}" alt="Card image cap">
+              {% endif %}
+              <div class="card-body">
+                <p>{{ page.excerpt }}</p>
+                <a href="/" class="btn btn-primary stretched-link">Return Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     {% include footer.html %}
   </body>
