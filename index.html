@@ -4,12 +4,13 @@ layout: default
 
 <div class="jumbotron">
   <div class="container-fluid mt-5 pt-1">
-    <h1>Welcome <span class="font-bolder">Home</span></h1>
-    <p class="lead">The Homestead Story</p>
+    <h1 class="text-right">Welcome <span class="font-bolder">Home</span></h1>
+    <p class="lead text-right">The Homestead Story</p>
   </div>
 
+  <button type="button" class="float-right btn btn-light btn-lg" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Learn More</button>
   <div class="container-fluid card-container">
-    <div class="mt-5 pt-5 card-columns">
+    <div class="collapse mt-5 pt-5 card-columns" id="collapseExample">
     {% for post in site.posts %}
       <div class="card">
         {% if post.image-url %}
