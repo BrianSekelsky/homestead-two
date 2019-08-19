@@ -5,28 +5,29 @@
 
 body {
     font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 300;
-    color: #FF7A3B
+    color: #B09E80;
 }
 
 .font-bolder {
     font-weight: 900;
-    color: #FF7A3B;
+    color: #B09E80;
 }
 
 .font-bolder-no-color {
-    font-weight: 900;
-    color: white;
+    font-weight: 600;
+    color: black;
 }
 
 .lead {
     font-weight: 400;
-    font-size: 1.5rem;
-    color: #FF7A3B;
+    font-size: 2rem;
+    color: #B09E80;
     padding-left: 10px;
 }
 
@@ -53,7 +54,7 @@ h1 {
 .jumbotron-post {
     color: black;
     // background-image: url("/images/il_794xN.1098056634_26yg.jpg");
-    background:rgba(255,122,59,0.9);
+    // background:rgba(255,122,59,0.9);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,8 +93,12 @@ h1 {
     max-height: none;
 }
 
+.card-transparent {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 .card-container {
-    margin-top: 200px;
+    margin-top: 80px;
 }
 
 .tall-card {
@@ -101,14 +106,15 @@ h1 {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 .post {
-    backdrop-filter: blur(8px);
+    // backdrop-filter: blur(8px);
     height: 100vh;
     width: 100vw;
     padding-left: 4rem;
     padding-right: 4rem;
 }
-  
-// .card:hover {
-//     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-// }

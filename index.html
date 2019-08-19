@@ -3,14 +3,29 @@ layout: default
 ---
 
 <div class="jumbotron">
-  <div class="container-fluid mt-5 pt-1">
+  <div class="container-fluid">
     <h1 class="text-right">Welcome <span class="font-bolder">Home</span></h1>
     <p class="lead text-right">The Homestead Story</p>
   </div>
 
-  <button type="button" class="float-right btn btn-light btn-lg" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Learn More</button>
-  <div class="container-fluid card-container">
-    <div class="collapse mt-5 pt-5 card-columns" id="collapseExample">
+  <button type="button" class="float-right btn btn-light btn-lg mr-3" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Learn More</button>
+  <div class="card-container">
+    <div class="collapse" id="collapseExample">
+      <div class="row">
+      <div class="col-5"></div>
+      <div class="col-7">
+          <div class="list-group">
+            {% for post in site.posts %}
+            <a href="{{ post.url }}" class="list-group-item list-group-item-action p-4 card-transparent">
+              <h2>{{ post.title }}</h2>
+              <p>{{ post.excerpt }}</p>
+            </a>
+            {% endfor %}
+          </div>
+      </div>
+      </div>
+    </div>
+    <!-- <div class="collapse mt-5 pt-5 card-columns" id="collapseExample">
     {% for post in site.posts %}
       <div class="card">
         {% if post.image-url %}
@@ -22,8 +37,7 @@ layout: default
           <a href="{{ post.url }}" class="btn btn-primary stretched-link">See More</a>
         </div>
       </div>
-    {% endfor %}
+    {% endfor %} -->
   </div>
 
-</div>
 </div>
