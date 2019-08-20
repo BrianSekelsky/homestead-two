@@ -2,26 +2,33 @@
 layout: default
 ---
 
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="listGroup">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="list-group-item list-group-item-action p-4 card-transparent">
+      <h2 class="font-bolder">{{ post.title }}</h2>
+      <p>{{ post.excerpt }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
 <div class="jumbotron">
   <div class="container-fluid">
     <h1 class="text-right">Welcome <span class="font-bolder">Home</span></h1>
     <p class="lead text-right">The Homestead Story</p>
   </div>
 
-  <button type="button" class="float-right btn btn-light btn-lg mr-3" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Learn More</button>
+  <!-- <button type="button" class="float-right btn btn-light btn-lg mr-3" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Learn More</button> -->
+  <div id="main">
+    <button id="openButton" class="openbtn float-right btn btn-light btn-lg mr-3" onclick="openNav()">Learn More</button> 
+  </div>
   <div class="card-container">
     <div class="collapse" id="collapseExample">
       <div class="row">
       <div class="col-5"></div>
       <div class="col-7">
-          <div class="list-group">
-            {% for post in site.posts %}
-            <a href="{{ post.url }}" class="list-group-item list-group-item-action p-4 card-transparent">
-              <h2 class="font-bolder">{{ post.title }}</h2>
-              <p>{{ post.excerpt }}</p>
-            </a>
-            {% endfor %}
-          </div>
       </div>
       </div>
     </div>
@@ -41,3 +48,23 @@ layout: default
   </div>
 
 </div>
+
+<script>
+  /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "450px";
+    document.getElementById("main").style.marginLeft = "450px";
+    document.getElementById("openButton").style.visibility = "hidden";
+    setTimeout(function() {
+      document.getElementById("listGroup").style.visibility = "visible"
+    }, 500);
+  }
+
+  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+  function closeNav() {
+    document.getElementById("listGroup").style.visibility = "hidden"
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("openButton").style.visibility = "visible";
+  }
+</script>
