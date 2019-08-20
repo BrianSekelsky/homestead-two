@@ -2,32 +2,31 @@
 ---
 
 @import 'bootstrap/bootstrap';
+@import 'custom/variables';
 
 body {
-    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', serif;
     font-size: 1.5rem;
 }
 
 h1 {
+    font-family: 'Merriweather';
     font-size: 6rem;
     font-weight: 900;
-    color: white;
+    color: $primary-text-color;
 }
 
 .font-bolder {
+    font-family: 'Merriweather';
     font-weight: 900;
 }
 
-.font-bolder-no-color {
-    font-weight: 600;
-    color: black;
-}
-
 .lead {
-    font-weight: 400;
+    font-weight: bold;
     font-size: 2rem;
-    color: #E2A463;
+    color: $primary;
     padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .card-columns {
@@ -41,7 +40,6 @@ h1 {
 .jumbotron {
     color: black;
     background-image: url("/images/il_794xN.1098056634_26yg.jpg");
-    // background:linear-gradient(0deg,rgba(255,122,59,0.6),rgba(255,171,46,0.3)),url('/images/il_794xN.1098056634_26yg.jpg');
     filter: blur(5%);
     background-position: center;
     background-repeat: no-repeat;
@@ -52,8 +50,6 @@ h1 {
 
 .jumbotron-post {
     color: black;
-    // background-image: url("/images/il_794xN.1098056634_26yg.jpg");
-    // background:rgba(255,122,59,0.9);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,10 +90,13 @@ h1 {
 
 .card-transparent {
     background-color: rgba(255, 255, 255, 0.0);
+    color: $secondary-text-color;
+    border-radius: 0px;
 }
 
 .post-card-transparent {
-    background-color: rgba(255, 255, 255, 0.95);
+    color: $secondary-text-color;
+    background-color: $secondary;
 }
 
 .card-container {
@@ -115,7 +114,6 @@ h1 {
 }
 
 .post {
-    // backdrop-filter: blur(8px);
     height: 100vh;
     width: 100vw;
     padding-left: 4rem;
@@ -128,14 +126,13 @@ h1 {
 
 #listGroup {
     visibility: hidden;
+    color: white;
 }
 
 #openButton {
     visibility: visible;
 }
 
-//////
-/* The sidebar menu */
 .sidebar {
     height: 86vh;
     width: 0;
@@ -143,12 +140,16 @@ h1 {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: $secondary;
     overflow-x: hidden;
     padding-top: 60px;
     margin-top: 14vh;
     transition: all 0.5s;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  .closebtn {
+      color: $secondary-text-color;;
   }
   
   .sidebar .closebtn {
@@ -160,6 +161,6 @@ h1 {
   }
   
   #main {
-    transition: margin-left .5s; /* If you want a transition effect */
+    transition: margin-left .5s;
     padding: 20px;
   }
